@@ -1,0 +1,19 @@
+git diff - разница между текущим unstaged и последним коммитом
+git diff --staged - разница между текущим staged и последним коммитом
+git diff commit_id - разница между текущим staged и последним коммитом с id commit_id
+
+git reset 
+          --soft - все коммиты после - в staged
+          --mixed - все коммиты после - в unstaged
+          --hard - все коммиты после - удалить безвозвратно
+              HEAD^ - на один коммит назад
+              HEAD ~2 - на два коммита назад
+              или hash нужного коммита
+git reset = git reset --mixed HEAD - переводит все staged в unstaged
+
+git checkout 
+              HEAD^ - на один коммит назад
+              HEAD ~2 - на два коммита назад
+              или hash нужного коммита
+git checkout <commit pointer> <path to file> - возвращает выбранные файлы из указанного коммита
+git checkout -- . - удалить все unstaged
